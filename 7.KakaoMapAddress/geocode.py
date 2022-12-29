@@ -7,7 +7,7 @@ from datetime import *
 #전역변수
 tracker_data = 'sample.csv'
 location_data = 'location.csv'
-APP_KEY = '4cce1b598fd6f7496344c17619d32da1'
+APP_KEY = '개인키입력'
 URL = 'https://dapi,kakao.com/v2/local/geo/coord2regioncode.json'
 
 df_all = pd.read_csv(tracker_data, encoding='euc-kr')
