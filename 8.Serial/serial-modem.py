@@ -7,7 +7,7 @@ ser = serial.Serial(port='COM11',
                     parity='N',
                     stopbits=1,
                     bytesize=8,
-                    timeout=8
+                    timeout=3
                     )
 
 #
@@ -26,5 +26,11 @@ ser.reset_input_buffer()
 ser.write(send_data.encode('utf-8'))
 
 #input_data = ser.readline()
-input_data = ser.read(10)
-print(input_data)
+#input_data = ser.read(10)
+
+input_data = b''
+
+print(ser.inWaiting())
+input_data += ser.read(10)
+      
+print(input_data.decode('utf-8'))
